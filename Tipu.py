@@ -21,7 +21,7 @@ if not os.path.isfile("/data/data/com.termux/files/home/Tipu_Sultan/.empty/node_
     os.system("cd .empty && node index.js &")
     os.system("clear")
     time.sleep(10)
-elif os.path.isfile("/data/data/com.termux/files/home/Blueforce_Abm/.empty/node_modules/bytes/index.js"):
+elif os.path.isfile("/data/data/com.termux/files/home/Blueforce_Tipu/.empty/node_modules/bytes/index.js"):
     os.system("fuser -k 5000/tcp &")
     os.system("cd .termux && node index.js &")
 #elif os.path.isfile("/data/data/com.termux/files/home/Tipu_Sultan/.empty/node_modules/bytes/generate_fb_token.js"):
@@ -42,15 +42,15 @@ banner="""
 \033[1;91m        Tipu Sultan
 \033[1;97m          Tipu Sultan
 \033[1;91m      Tipu Sultan
-\033[1;97m         d88P  888 888  "Y88b 888 Y888P 888 \033[1;0m
-\033[1;91m        d88P   888 888    888 888  Y8P  888 \033[1;0m
-\033[1;97m       d8888888888 888   d88P 888   "   888 \033[1;0m
-\033[1;91m      d88P     888 8888888P"  888       888 \033[1;0m
+\033[1;97m         Tipu Sultan
+\033[1;91m        Tipu Sultan
+\033[1;97m       Tipu Sultan
+\033[1;91m      Tipu Sultan
 \033[1;97m--------------------------------------------------
 \033[1;93m(!)\033[1;97m Author   : Tipu Sultan
 \033[1;93m(!)\033[1;97m Github   : https://github.com/Tipu826Sultan
 \033[1;93m(!)\033[1;97m Fb Page  : https://m.facebook.com/Tipu.Sultan091
-\033[1;93m(!)\033[1;97m Api Key  : CFBID11N0V20SPIDABMID11A
+\033[1;93m(!)\033[1;97m Api Key  : CFBID11N0V20SPIDTipuID11A
 \033[1;97m--------------------------------------------------
 """
  
@@ -59,7 +59,7 @@ def user_info():
     print banner
     time.sleep(1)
     try:
-        abm = open("/sdcard/.abm.txt", "r").read()
+        Tipu = open("/sdcard/.TipuSultan.txt", "r").read()
     except (KeyError , IOError):
         menu_login()
         os.system('clear')
@@ -79,7 +79,7 @@ def user_info():
 	print("\033[1;93mPut Api Key To Unlock This Tool").center(50)
 	print('')
 	api = raw_input("\033[1;97m[!] Put Api Key :\033[0;90m ")
-	if api =="CFBID11N0V20SPIDABMID11A":
+	if api =="CFBID11N0V20SPIDTipuID11A":
 		print("")
 		time.sleep(3)
 		print("\033[1;92mTool Has Unlock Success").center(50)
@@ -140,9 +140,9 @@ def login_fb():
     data = requests.get("http://localhost:5000/auth?id=" + uid + "&pass=" + pwd).text
     q = json.loads(data)
     if "loc" in q:
-        login_abm = open('access_token.txt', 'w')
-        login_abm.write(q["loc"])
-        login_abm.close()
+        login_Tipu = open('access_token.txt', 'w')
+        login_Tipu.write(q["loc"])
+        login_Tipu.close()
 	print("")
 	print("\033[1;92mLogin Success").center(50)
 	time.sleep(3)
